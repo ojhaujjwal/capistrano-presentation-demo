@@ -1,0 +1,14 @@
+
+version: '2'
+
+services:
+
+### Workspace Utilities Container ###########################
+
+    application:
+        build:
+            context: ./node
+        tty: true
+        ports:
+            - "9090:9090"
+            - "-2222:22"
