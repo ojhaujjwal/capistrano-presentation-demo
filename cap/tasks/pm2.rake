@@ -17,7 +17,8 @@ namespace :pm2 do
 
   def restart_app
     within current_path do
-      execute :pm2, :restart, 'server.js'
+      execute :pm2, :stop, 'server'
+      execute :pm2, :start, 'server.js'
     end
   end
 
