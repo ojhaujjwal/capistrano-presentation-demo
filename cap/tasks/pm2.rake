@@ -31,19 +31,9 @@ namespace :pm2 do
   desc 'Restart app gracefully'
   task :restart do
     on roles(:app) do
-      case app_status
-      when nil
-        info 'App is not registerd'
-        start_app
-      when 'stopped'
-        info 'App is stopped'
-        restart_app
-      when 'errored'
-        info 'App has errored'
-        restart_app
-      when 'online'
-        info 'App is online'
-        restart_app
+      within fetch(:deploy_to) do
+        execute 'pwd'
+        execute :pm2, 'startOrRestart ecosystem.json'
       end
     end
   end

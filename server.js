@@ -3,7 +3,7 @@ var config = require('./config');
 var app = express();
 
 app.get('/',function (req, res) {
-  res.send('<h2>Hello World!!!!</h2>');
+  res.send('<h3>Hello World!!</h3>');
 });
 
 app.listen(config.port, function () {
