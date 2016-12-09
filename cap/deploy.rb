@@ -10,7 +10,7 @@ set :linked_dirs, ['tmp/session', 'tmp/cache', 'backups']
 namespace :deploy do
   after :updated, "npm:install"
 
-  after :finished, "npm:reload"
+  after :publishing, "pm2:restart"
   after :finished, "notify:finish"
 
   after :failed, "notify:failure"

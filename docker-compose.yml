@@ -7,7 +7,7 @@ services:
 
     application:
         build:
-            context: ./node
+            context: ./application
         tty: true
         ports:
             - "9090:9090"

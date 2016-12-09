@@ -1,5 +1,5 @@
 /.idea
 node_modules
-node/key.pub
+key.pub
 log/
 /app
