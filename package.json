@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "pm2 start server.js",
-    "reload": "pm2 reload server.js",
+    "reload": "pm2 restart server.js",
     "stop": "pm2 stop server.js"
   },
   "dependencies": {

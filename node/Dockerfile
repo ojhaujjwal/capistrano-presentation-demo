@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y nodejs npm && \
     ln -s /usr/bin/nodejs /usr/bin/node
 
-RUN apt-get install git
+RUN apt-get -y install git
 
 ADD key.pub /tmp/id_rsa.pub
 RUN cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys && rm -f /tmp/id_rsa.pub

@@ -11,4 +11,6 @@ services:
         tty: true
         ports:
             - "9090:9090"
-            - "-2222:22"
+            - "2222:22"
+        volumes:
+            - ./app:/var/www/app
