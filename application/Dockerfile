@@ -1,10 +1,7 @@
 FROM phusion/baseimage:latest
 
 RUN apt-get update && \
-    apt-get install -y nodejs npm && \
-    ln -s /usr/bin/nodejs /usr/bin/node
-
-RUN apt-get -y install git
+    apt-get -y install git nginx 
 
 ADD key.pub /tmp/id_rsa.pub
 RUN cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys && rm -f /tmp/id_rsa.pub

@@ -1,5 +1,5 @@
 var express = require('express');
-var config = requrie('./config');
+var config = require('./config');
 var app = express();
 
 app.get('/',function (req, res) {
