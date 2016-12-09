@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "pm2 start server.js",
-    "reload": "pm2 restart server.js",
+    "start": "pm2 start server.js --name='app'",
+    "reload": "pm2 reload server.js --name='app'",
     "stop": "pm2 stop server.js"
   },
   "dependencies": {

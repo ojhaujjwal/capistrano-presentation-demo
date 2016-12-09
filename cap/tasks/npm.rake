@@ -12,7 +12,7 @@ namespace :npm do
     task :reload do
       on roles(:all) do
         within release_path do
-          execute :npm, "run reload"
+          execute "npm run reload || npm run start"
          end
       end
     end
