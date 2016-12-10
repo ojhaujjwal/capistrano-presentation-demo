@@ -1,20 +1,10 @@
 namespace :npm do
   desc "Running npm Install"
-  task :install do
+  task :install do |task|
     on roles(:all) do
       within release_path do
-        execute :npm, "install --no-dev --prefer-dist --optimize-autoloader -n --quiet"
-       end
-    end
-  end
-
-    desc "Running npm reload"
-    task :reload do
-      on roles(:all) do
-        within release_path do
-          execute 'pwd'
-          execute "npm run reload || npm run start"
-         end
+        execute :npm, "install --no-dev"
       end
     end
+  end
 end
